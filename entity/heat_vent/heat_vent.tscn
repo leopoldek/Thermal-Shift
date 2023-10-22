@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://entity/heat_vent/heat_vent.gd" type="Script" id=1]
+[ext_resource path="res://entity/heat_vent/heat_vent_mask.gd" type="Script" id=2]
+[ext_resource path="res://entity/heat_vent/grate.png" type="Texture" id=3]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+render_priority = 0
+blend_mode = 1
+light_mode = 0
+
+[node name="HeatVent" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+heat = 0.06
+
+[node name="Mask" type="Node2D" parent="." index="0"]
+
+material = SubResource( 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Material" ]
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 3 )
+
+
